@@ -29,10 +29,10 @@ export default function ComparePetrol() {
   const maxCost = Math.max(y.ev, y.petrol);
 
   return (
-    <section id="compare" aria-labelledby="compare-title" className="relative overflow-hidden bg-ink-950 py-28 md:py-40">
+    <section id="compare" aria-labelledby="compare-title" className="relative overflow-hidden bg-ink-950 py-16 md:py-24">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
-          index="03"
+          index="01"
           eyebrow="Electric vs petrol"
           id="compare-title"
           title={"Eco Bike vs a\npetrol bike."}
@@ -40,7 +40,7 @@ export default function ComparePetrol() {
         />
 
         {/* ── Savings calculator ─────────────────────── */}
-        <div className="glass mt-14 rounded-3xl p-6 md:mt-20 md:p-10">
+        <div className="glass mt-10 rounded-3xl p-6 md:mt-14 md:p-10">
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <label htmlFor="km-per-day" className="text-lg font-semibold">
               How far do you ride each day?

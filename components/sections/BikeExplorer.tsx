@@ -62,11 +62,11 @@ export default function BikeExplorer() {
   const part = active ? PARTS[active] : null;
 
   return (
-    <section id="explorer" aria-labelledby="explorer-title" className="relative overflow-hidden bg-ink-950 py-28 md:py-40">
+    <section id="explorer" aria-labelledby="explorer-title" className="relative overflow-hidden bg-ink-950 py-16 md:py-24">
       <div className="tech-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
-          index="05"
+          index="01"
           eyebrow="Bike Explorer"
           id="explorer-title"
           title={"Every part,\nre-imagined."}
@@ -76,7 +76,7 @@ export default function BikeExplorer() {
         {/* Stage */}
         <div
           ref={stage}
-          className="corner-frame relative mt-14 aspect-[4/3] w-full overflow-hidden border border-white/[0.06] bg-gradient-to-b from-white/[0.02] to-transparent md:mt-20 md:aspect-[16/8]"
+          className="corner-frame relative mt-10 aspect-[4/3] w-full overflow-hidden border border-white/[0.06] bg-gradient-to-b from-white/[0.02] to-transparent md:mt-14 md:aspect-[16/8]"
           onPointerMove={(e) => {
             if (!fine || reduced || active || !stage.current) return;
             const r = stage.current.getBoundingClientRect();

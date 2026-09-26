@@ -11,17 +11,17 @@ export default function EasyToUse() {
   const reduced = useReducedMotion();
 
   return (
-    <section id="easy-use" aria-labelledby="easy-title" className="relative overflow-hidden bg-ink-900 py-28 md:py-40">
+    <section id="easy-use" aria-labelledby="easy-title" className="relative overflow-hidden bg-ink-900 py-16 md:py-24">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
-          index="04"
+          index="03"
           eyebrow="Easy to use"
           id="easy-title"
           title={"Four steps.\nThat's it."}
           lede="If you can ride a scooter, you can ride this. There's nothing new to learn."
         />
 
-        <div className="mt-14 grid gap-10 md:mt-20 lg:grid-cols-2 lg:items-center">
+        <div className="mt-10 grid gap-10 md:mt-14 lg:grid-cols-2 lg:items-center">
           <ol className="space-y-4">
             {EASY_STEPS.map((s, i) => (
               <motion.li

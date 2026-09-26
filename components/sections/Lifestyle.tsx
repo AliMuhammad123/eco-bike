@@ -27,10 +27,10 @@ export default function Lifestyle() {
   }, [i, visible, paused, reduced]);
 
   return (
-    <section id="experience" aria-labelledby="life-title" className="relative bg-ink-950 py-28 md:py-40">
+    <section id="experience" aria-labelledby="life-title" className="relative bg-ink-950 py-16 md:py-24">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10">
         <p className="eyebrow mb-6 flex items-center gap-4">
-          <span className="font-mono text-volt">11</span>
+          <span className="font-mono text-volt">03</span>
           <span className="h-px w-12 bg-white/30" />
           The Experience
         </p>

@@ -129,7 +129,7 @@ export default function RideAI() {
   const lastAi = [...msgs].reverse().find((m) => m.role === "ai");
 
   return (
-    <section id="ride-ai" aria-labelledby="ai-title" className="relative overflow-hidden bg-ink-900 py-28 md:py-40">
+    <section id="ride-ai" aria-labelledby="ai-title" className="relative overflow-hidden bg-ink-900 py-16 md:py-24">
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
           index="07"

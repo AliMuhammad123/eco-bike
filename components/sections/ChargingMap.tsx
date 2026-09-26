@@ -44,10 +44,10 @@ export default function ChargingMap() {
   const totalFree = STATIONS.reduce((s, x) => s + x.free, 0);
 
   return (
-    <section id="charging" aria-labelledby="charge-title" className="relative overflow-hidden bg-ink-950 py-28 md:py-40">
+    <section id="charging" aria-labelledby="charge-title" className="relative overflow-hidden bg-ink-950 py-16 md:py-24">
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
-          index="07"
+          index="01"
           eyebrow="Charging Network"
           id="charge-title"
           title={"Power is never\nfar away."}

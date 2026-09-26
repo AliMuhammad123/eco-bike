@@ -136,8 +136,8 @@ export const LIFESTYLE = [
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ""; // "/<repo>" on GitHub Pages
 
 export const PHOTOS = {
-  hero: { src: `${BASE}/images/bike-silver.webp`, alt: "Eco Bike electric scooter in silver with green accents" },
-  riding: { src: `${BASE}/images/bike-black.webp`, alt: "Eco Bike electric scooter in graphite black" },
+  hero: { src: `${BASE}/images/scooter-parked.webp`, alt: "Eco Bike electric scooter in matte graphite with yellow accents" },
+  riding: { src: `${BASE}/images/scooter-riding.webp`, alt: "A rider on the Eco Bike electric scooter" },
 };
 
 /** "Easy to understand": electric parts explained through the petrol parts people already know. */

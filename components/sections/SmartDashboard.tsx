@@ -70,7 +70,7 @@ export default function SmartDashboard() {
   const power = Math.max(0.08, (speed / m.max) * (m.power / 11));
 
   return (
-    <section id="dashboard" aria-labelledby="dash-title" className="relative overflow-hidden bg-ink-950 py-28 md:py-40">
+    <section id="dashboard" aria-labelledby="dash-title" className="relative overflow-hidden bg-ink-950 py-16 md:py-24">
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[70vw] w-[70vw] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.12] blur-[120px] transition-colors duration-700"
         style={{ background: m.color }}

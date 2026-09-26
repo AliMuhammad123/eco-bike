@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Bike from "@/components/bike/Bike";
 import ExplodedBike from "@/components/bike/ExplodedBike";
 import { Sunrise } from "@/components/bike/Scenes";
@@ -100,16 +101,16 @@ export default function Hero() {
             </button>
           </Magnetic>
           <Magnetic>
-            <button className="btn btn-ghost" onClick={() => scrollTo("#compare")}>
+            <Link href="/savings" className="btn btn-ghost">
               Compare with petrol
-            </button>
+            </Link>
           </Magnetic>
         </motion.div>
       </div>
 
       {/* ── Bike ─────────────────────────────────────── */}
       <motion.div
-        className="mx-auto w-full max-w-[min(440px,58svh)]"
+        className="mx-auto w-full max-w-[min(440px,50svh)]"
         initial={reduced ? false : { opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}

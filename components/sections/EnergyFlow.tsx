@@ -88,7 +88,7 @@ export default function EnergyFlow() {
   ];
 
   return (
-    <section id="energy" aria-labelledby="energy-title" className="relative overflow-hidden bg-ink-900 py-28 md:py-40">
+    <section id="energy" aria-labelledby="energy-title" className="relative overflow-hidden bg-ink-900 py-16 md:py-24">
       <div className="tech-grid pointer-events-none absolute inset-0 opacity-30" />
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-10">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
@@ -118,7 +118,7 @@ export default function EnergyFlow() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-8 md:mt-20 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="mt-10 grid gap-8 md:mt-14 lg:grid-cols-[minmax(0,1fr)_320px]">
           {/* Schematic */}
           <div className="corner-frame relative border border-white/[0.07] bg-ink-950/60">
             <div className="relative mx-auto" style={{ aspectRatio: `${W} / ${H}`, maxHeight: wide ? undefined : 760 }}>

@@ -37,17 +37,17 @@ export default function Benefits() {
   const reduced = useReducedMotion();
 
   return (
-    <section id="benefits" aria-labelledby="benefits-title" className="relative overflow-hidden bg-ink-900 py-28 md:py-40">
+    <section id="benefits" aria-labelledby="benefits-title" className="relative overflow-hidden bg-ink-900 py-16 md:py-24">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
-          index="02"
+          index="01"
           eyebrow="Benefits of EV bikes"
           id="benefits-title"
           title={"Why go\nelectric?"}
           lede="Six everyday reasons riders switch — and don't go back."
         />
 
-        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:mt-20">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:mt-14">
           {BENEFITS.map((b, i) => (
             <motion.li
               key={b.title}

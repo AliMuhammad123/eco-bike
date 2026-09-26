@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import SiteShell from "@/components/core/SiteShell";
 import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ecobike.example";
@@ -46,7 +47,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="grain">{children}</body>
+      <body className="grain">
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   );
 }

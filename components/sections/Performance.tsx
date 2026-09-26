@@ -75,7 +75,7 @@ export default function Performance() {
   };
 
   return (
-    <section id="performance" aria-labelledby="perf-title" className="relative overflow-hidden bg-ink-900 py-28 md:py-40">
+    <section id="performance" aria-labelledby="perf-title" className="relative overflow-hidden bg-ink-900 py-16 md:py-24">
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
           index="10"

@@ -12,10 +12,10 @@ export default function HowItWorks() {
   const reduced = useReducedMotion();
 
   return (
-    <section id="how-it-works" aria-labelledby="how-title" className="relative overflow-hidden bg-ink-950 py-28 md:py-40">
+    <section id="how-it-works" aria-labelledby="how-title" className="relative overflow-hidden bg-ink-950 py-16 md:py-24">
       <div className="mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
-          index="01"
+          index="02"
           eyebrow="Easy to understand"
           id="how-title"
           title={"How an electric\nbike works."}
@@ -23,7 +23,7 @@ export default function HowItWorks() {
         />
 
         {/* Energy path */}
-        <ol className="mt-14 flex flex-col gap-3 md:mt-20 md:flex-row md:items-center" aria-label="How energy gets to the wheel">
+        <ol className="mt-10 flex flex-col gap-3 md:mt-14 md:flex-row md:items-center" aria-label="How energy gets to the wheel">
           {FLOW.map((step, i) => (
             <li key={step} className="flex items-center gap-3 md:flex-1">
               <span className="glass flex-1 rounded-2xl px-5 py-4 text-center">
@@ -40,7 +40,7 @@ export default function HowItWorks() {
         </ol>
 
         {/* Part-by-part, in petrol terms */}
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {HOW_IT_WORKS.map((p, i) => (
             <motion.li
               key={p.ev}
@@ -58,7 +58,7 @@ export default function HowItWorks() {
         </ul>
 
         {/* Key numbers, in plain words */}
-        <h3 className="eyebrow mt-20">The numbers, in plain words</h3>
+        <h3 className="eyebrow mt-12">The numbers, in plain words</h3>
         <dl className="mt-6 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {PLAIN_SPECS.map((s) => (
             <div key={s.label} className="bg-ink-950 p-6">

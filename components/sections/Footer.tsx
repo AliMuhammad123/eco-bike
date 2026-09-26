@@ -1,14 +1,15 @@
+import Link from "next/link";
 import Logo from "@/components/core/Logo";
 
 const COLS = [
-  { h: "Brand", links: [["The bike", "#explorer"], ["How it works", "#how-it-works"], ["vs Petrol", "#compare"], ["Charging", "#charging"]] },
-  { h: "Company", links: [["Support", "#contact"], ["Why electric", "#benefits"], ["Contact", "mailto:hello@ecobike.example"]] },
+  { h: "Explore", links: [["The bike", "/bike"], ["Savings vs petrol", "/savings"], ["Build yours", "/build"], ["Charging", "/charging"]] },
+  { h: "Company", links: [["Home", "/"], ["Contact", "/contact"], ["Email us", "mailto:hello@ecobike.example"]] },
   { h: "Follow", links: [["Instagram", "https://instagram.com"], ["YouTube", "https://youtube.com"]] },
 ];
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative border-t border-white/[0.07] bg-ink-950 px-5 pb-10 pt-20 md:px-10">
+    <footer className="relative border-t border-white/[0.07] bg-ink-950 px-5 pb-8 pt-14 md:px-10">
       <div className="mx-auto grid max-w-[1320px] gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
         <div>
           <Logo />
@@ -23,13 +24,19 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {c.links.map(([l, href]) => (
                 <li key={l}>
-                  <a
-                    href={href}
-                    className="text-sm text-white/75 transition-colors hover:text-volt"
-                    {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  >
-                    {l}
-                  </a>
+                  {href.startsWith("/") ? (
+                    <Link href={href} className="text-sm text-white/75 transition-colors hover:text-volt">
+                      {l}
+                    </Link>
+                  ) : (
+                    <a
+                      href={href}
+                      className="text-sm text-white/75 transition-colors hover:text-volt"
+                      {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    >
+                      {l}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -37,7 +44,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="mx-auto mt-20 flex max-w-[1320px] flex-col items-start justify-between gap-4 border-t border-white/[0.07] pt-6 font-mono text-[10px] tracking-widest text-white/35 md:flex-row md:items-center">
+      <div className="mx-auto mt-12 flex max-w-[1320px] flex-col items-start justify-between gap-4 border-t border-white/[0.07] pt-6 font-mono text-[10px] tracking-widest text-white/35 md:flex-row md:items-center">
         <span>© {new Date().getFullYear()} ECO BIKE. ALL RIGHTS RESERVED.</span>
         <span className="flex items-center gap-3" aria-label="System charged">
           {/* Pulsing battery */}

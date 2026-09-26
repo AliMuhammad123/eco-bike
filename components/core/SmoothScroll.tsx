@@ -1,6 +1,7 @@
 "use client";
 
 import Lenis from "lenis";
+import { usePathname } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useRef } from "react";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/lib/gsap";
 
@@ -20,6 +21,7 @@ export const useSmoothScroll = () => useContext(ScrollCtx);
  */
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (prefersReducedMotion()) return;
@@ -42,6 +44,15 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       lenisRef.current = null;
     };
   }, []);
+
+  // New page: start at the top and re-measure scroll-driven animations.
+  useEffect(() => {
+    if (location.hash) return;
+    lenisRef.current?.scrollTo(0, { immediate: true, force: true });
+    window.scrollTo(0, 0);
+    const id = requestAnimationFrame(() => ScrollTrigger.refresh());
+    return () => cancelAnimationFrame(id);
+  }, [pathname]);
 
   const scrollTo = useCallback<ScrollTo>((target, opts = {}) => {
     const el =

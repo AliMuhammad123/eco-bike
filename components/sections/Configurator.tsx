@@ -65,10 +65,10 @@ export default function Configurator() {
   };
 
   return (
-    <section id="build" aria-labelledby="build-title" className="relative overflow-hidden bg-ink-950 py-28 md:py-40">
+    <section id="build" aria-labelledby="build-title" className="relative overflow-hidden bg-ink-950 py-16 md:py-24">
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
-          index="06"
+          index="01"
           eyebrow="Build Your Bike"
           id="build-title"
           title={"Make it\nunmistakably yours."}

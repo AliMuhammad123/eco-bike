@@ -41,17 +41,17 @@ export default function Sustainability() {
   const back = useTransform(scrollYProgress, [0.7, 1], [0, 1]);
 
   return (
-    <section id="sustainability" aria-labelledby="sus-title" className="relative overflow-hidden bg-ink-950 py-28 md:py-40">
+    <section id="sustainability" aria-labelledby="sus-title" className="relative overflow-hidden bg-ink-950 py-16 md:py-24">
       <div className="relative mx-auto max-w-[1320px] px-5 md:px-10">
         <SectionHead
-          index="08"
+          index="02"
           eyebrow="Lifecycle"
           id="sus-title"
           title={"Measured,\nnot promised."}
           lede="Every stage of the bike's life, from raw aluminium to recovered battery cells — with the numbers to show for it."
         />
 
-        <div ref={ref} className="relative mt-16 md:mt-24">
+        <div ref={ref} className="relative mt-10 md:mt-14">
           {/* Desktop loop line */}
           <svg viewBox="0 0 1200 300" className="absolute inset-x-0 top-0 hidden h-auto w-full md:block" aria-hidden>
             <path d="M120 60 H1080" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />

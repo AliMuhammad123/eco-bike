@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Bike from "@/components/bike/Bike";
@@ -22,7 +23,7 @@ export default function FinalCTA() {
   const glow = useTransform(scrollYProgress, [0.5, 1], [0, 0.16]);
 
   return (
-    <section ref={ref} id="final" aria-labelledby="final-title" className="relative overflow-hidden bg-black pb-24 pt-32 md:pb-32 md:pt-48">
+    <section ref={ref} id="final" aria-labelledby="final-title" className="relative overflow-hidden bg-black pb-16 pt-20 md:pb-20 md:pt-28">
       <div className="relative mx-auto max-w-[1320px] px-5 text-center md:px-10">
         <p className="eyebrow mb-8">The next chapter</p>
         <SplitText id="final-title" text={"READY TO MOVE\nDIFFERENTLY?"} className="display mx-auto text-[clamp(2.8rem,9vw,9rem)]" />
@@ -37,9 +38,9 @@ export default function FinalCTA() {
         </motion.p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <Magnetic>
-            <a href="#build" className="btn btn-primary" data-cursor="Build">
+            <Link href="/build" className="btn btn-primary" data-cursor="Build">
               Build Your Bike
-            </a>
+            </Link>
           </Magnetic>
           <Magnetic>
             <button className="btn btn-ghost" onClick={() => setTestRideOpen(true)} data-cursor="Book">
@@ -50,7 +51,7 @@ export default function FinalCTA() {
       </div>
 
       {/* Bike emerging from darkness */}
-      <div className="relative mx-auto mt-16 w-[110vw] max-w-[1200px] -translate-x-[5vw] md:mt-24 md:w-[80vw] md:translate-x-0">
+      <div className="relative mx-auto mt-10 w-[110vw] max-w-[1200px] -translate-x-[5vw] md:mt-14 md:w-[80vw] md:translate-x-0">
         <motion.div className="pointer-events-none absolute left-1/2 top-1/2 h-[40%] w-[60%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-volt blur-[140px]" style={{ opacity: reduced ? 0.12 : glow }} />
         <motion.div style={reduced ? undefined : { filter, scale, y }} className="relative">
           <Bike config={config} headlight={1} battery={1} energy={1} className="w-full" title="Eco Bike emerging from darkness" />
