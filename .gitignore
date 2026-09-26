@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+.env*.local
+.DS_Store
+
+# Original downloaded photos; the site uses the cut-outs in public/images/
+/Images/
